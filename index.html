@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>画像文字変換</title>
+<link rel="stylesheet" type="text/css" href="style.css" media="all">
+</head>
+<body>
+<header role="banner">
+<div class="siteCatch">
+<h1>OCR on browser</h1>
+<p>画像から文字を抜き出す</p>
+</div>
+</header>
+
+<main id="contents" role="main">
+<div id="fileInputWrp">
+<p>画像ファイルをここにドラッグしてください</p>
+<!-- /fileInputWrp --></div>
+
+<div id="imgContain" class="hideDis">
+<h2>画像確認</h2>
+<div id="controller">
+<p><button id="imgScaleBig" class="button01">拡大（150％）</button>　｜　<button id="imgScaleSmall" class="button01">縮小（50％）</button>　｜　<button id="changeMode"  class="button01">トリミングモードにする</button></p>
+<p><button id="execOcr" class="button02">画像文字を文字に変換</button></p>
+<!-- controller --></div>
+
+<div id="editImgWrp">
+<div id="editImg"></div>
+<div id="placeholder" class="hideDis"></div>
+<!-- /editImgWrp --></div>
+
+<div id="done">
+<h2>変換結果</h2>
+<textarea id="result" rows="10" cols="100"></textarea>
+
+<h3>変換元データ</h3>
+<p id="clippedImg"></p>
+<!-- done --></div>
+<!-- imgContain --></div>
+</main>
+
+<aside id="subLeftNavigation" role="complementary">
+<p>Thanks to <a href="https://antimatter15.com/" target="_blank">antimatter15</a> who made ocrad.js. (OCR JavaScript library.)</p>
+</aside>
+
+<footer role="contentinfo">
+<p id="copyright"><small>Made by OREDON. Additional info: OREDON made some browser games. <a href="http://oredon.kidukilab.com/" target="_blank">オレには鈍器がある</a> | <a href="http://is.kidukilab.com/" target="_blank">INFINITELY SCOUT</a></small></p>
+</footer>
+
+<div id="loading" class="hideDis">
+<div class="balls">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+
+
+
+<script type="text/javascript" src="ocrad.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
